@@ -1,12 +1,16 @@
 
-import Koa from 'koa';
+import Koa from 'koa'
 import Router from 'koa-router'
 import mysql from 'mysql'
 import {EnvConfig} from '../config/config.index'
 import {AllRouters} from './routes/router';
+import { haha } from './common/global';
+
+console.log('this is main.ts')
+console.log(haha.memeda)
+
 // console.log(EnvConfig)
 // const connection = mysql.createConnection(EnvConfig.mysql)
-
 // connection.connect((err)=>{
     //     if(err){
         //         console.error ('error connecting:' + err.stack)

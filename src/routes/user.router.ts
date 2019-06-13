@@ -1,9 +1,12 @@
 import Router from 'koa-router';
+import {login} from '../controller/user/login'
 
 const router = new Router({prefix:'/user'})
 
-router.get('/', async(ctx,next) => {
-    ctx.body = 'this is user'
+router.get('/login', async(ctx,next) => {
+
+    ctx.body = await login()
+    next()
 })
 
 export { router } 

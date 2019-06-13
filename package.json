@@ -5,22 +5,28 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch src/**/* -e ts,tsx --exec ts-node src/main.ts"
+    "back": "nodemon --exec ts-node --files src/main.ts",
+    "start": "node dist/main.js",
+    "dev": "ts-node --files src/main.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jsonwebtoken": "^8.3.2",
     "@types/mysql": "^2.15.6",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
     "koa-combine-routers": "^4.0.2",
     "koa-router": "^7.4.0",
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "ts-node": "^8.2.0"
   },
   "devDependencies": {
     "@types/koa": "^2.0.48",
     "@types/koa-router": "^7.0.40",
     "nodemon": "^1.19.1",
-    "ts-node": "^8.2.0",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "tsconfig-paths": "^3.8.0",
     "tslint": "^5.17.0",
     "typescript": "^3.5.1"
   }
