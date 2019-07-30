@@ -5,29 +5,44 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "back": "nodemon --exec ts-node --files src/main.ts",
+    "back": "nodemon --exec ts-node --files -r tsconfig-paths/register src/main.ts",
     "start": "node dist/main.js",
-    "dev": "ts-node --files src/main.ts"
+    "dev": "ts-node-dev --respawn --transpileOnly  -- src/main.ts",
+    "webpack": ""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "@types/cors": "^2.8.5",
     "@types/jsonwebtoken": "^8.3.2",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-static": "^4.0.1",
+    "@types/koa__cors": "^2.2.3",
     "@types/mysql": "^2.15.6",
+    "cors": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-combine-routers": "^4.0.2",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "mysql": "^2.17.1",
-    "ts-node": "^8.2.0"
+    "ts-node": "^8.2.0",
+    "video.js": "^7.6.0",
+    "vue-videojs": "0.0.4"
   },
   "devDependencies": {
     "@types/koa": "^2.0.48",
     "@types/koa-router": "^7.0.40",
     "nodemon": "^1.19.1",
+    "ts-loader": "^6.0.4",
     "ts-node-dev": "^1.0.0-pre.40",
     "tsconfig-paths": "^3.8.0",
     "tslint": "^5.17.0",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.1",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
   }
 }
